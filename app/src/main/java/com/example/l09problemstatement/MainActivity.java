@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Location location) {
                         if(location != null){
-
+                            tvLoc.setText("Last Location:");
                             tvLat.setText(location.getLatitude()+"");
                             tvLong.setText(location.getLongitude()+"");
 
@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
                             double lng = data.getLongitude();
                             String msg = "Lat:" + lat + " Lng:"+ lng;
                             Toast.makeText(MainActivity.this,msg,Toast.LENGTH_SHORT).show();
+                            tvLoc.setText("Last Location:");
                             tvLat.setText(lat+"");
                             tvLong.setText(lng+"");
                             downtownCore =  new LatLng(lat,lng);
